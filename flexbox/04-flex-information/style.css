@@ -1,0 +1,39 @@
+
+html * {
+    box-sizing: border-box;
+}
+
+div.flex-container {
+    display: flex;
+    flex-direction: column;
+}
+
+div.flex-container > div.title {
+    text-align: center;
+    font-size: 28px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+div.tile-container {
+    display: flex;
+    margin-top: 32px;
+    gap: 52px;
+    justify-content: center;
+}
+
+div.tile-container > .flex-tile {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+div.tile-container > .flex-tile > img {
+    width: 100px;
+}
+
+div.tile-container > .flex-tile > .text {
+    white-space: wrap;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}

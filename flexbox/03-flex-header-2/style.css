@@ -1,0 +1,69 @@
+html * {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: gainsboro;
+}
+
+.menu-bar {
+    display: flex;
+    background-color: blanchedalmond;
+    justify-content: flex-start;
+    padding: 16px;
+}
+
+.menu-bar > .flex-container {
+    display: flex;
+}
+
+.menu-bar > .flex-container:nth-child(1) {
+    align-items: stretch;
+    margin-right: auto;
+    gap: 8px;
+}
+
+.menu-bar > .flex-container:nth-child(1) div.logo {
+    font-size: 40px;
+    color: purple;
+    font-weight: bold;
+    font-style: italic;
+}
+
+
+.menu-bar > .flex-container:nth-child(1) div.link {
+    display: flex;
+    font-size: 20px;
+    color: purple;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-bar > .flex-container:nth-child(1) div.link:hover {
+    text-decoration: underline;
+}
+
+
+.menu-bar > .flex-container:nth-child(2) {
+    align-items: center;
+    gap: 8px;
+}
+
+.menu-bar > .flex-container:nth-child(2) div.notification {
+    display: flex;
+    padding: 5px 20px;
+    background-color: purple;
+    color: white;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-bar > .flex-container:nth-child(2) div.disc {
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    background-color: purple;
+}

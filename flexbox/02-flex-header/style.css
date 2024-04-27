@@ -1,0 +1,38 @@
+div.menu-bar {
+    display:flex;
+    background-color: bisque;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100px;
+    flex-wrap: wrap;
+}
+
+ul.container {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    font-size: 20px;
+    padding: 0;
+    margin: 0px 10px 0px 10px;
+    height: 50px;
+    align-items: center;
+}
+
+li.menu-item {
+    background-color: aliceblue;
+    padding: 10px;
+}
+
+div.logo {
+    display: flex;
+    height: 80px;
+    width: 200px;
+    background-color: aliceblue;
+    color: orange;
+    font-size: 40px;
+    justify-content: center;
+    align-items: center;
+    flex: initial;
+    
+    
+}

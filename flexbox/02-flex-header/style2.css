@@ -1,0 +1,38 @@
+div.menu-bar {
+    background-color: bisque;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+
+ul.container {
+    display: flex;
+    height: 100%;
+    gap: 10px;
+    list-style: none;
+    font-size: 20px;
+    padding: 0;
+    margin: 0px 10px 0px 10px;
+    align-items: center;
+}
+
+li.menu-item {
+    background-color: aliceblue;
+    padding: 10px;
+    color: blue;
+}
+
+
+div.logo {
+    display: flex;
+    height: 80px;
+    width: 200px;
+    background-color: aliceblue;
+    color: orange;
+    font-size: 40px;
+    justify-content: center;
+    align-items: center;
+    flex: initial;
+    margin-left: auto;
+    margin-right: auto;    
+}

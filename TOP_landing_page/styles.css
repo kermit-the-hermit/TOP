@@ -1,0 +1,210 @@
+
+body * {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    
+}
+
+.header {
+    height: 50px;
+    display: flex;
+    background-color: #1F2937;
+    justify-content: space-around;
+}
+
+.header .header-logo {
+    display: flex;
+    color: #F9FAF8;
+    align-items: center;
+    font-weight: bold;
+}
+
+.header ul.header-links {
+    display: flex;
+    margin: 0;
+    align-items: center;
+    list-style: none;
+    gap: 15px;
+}
+
+.header ul.header-links li {
+    color: #F9FAF8;
+}
+
+.footer {
+    height: 50px;
+    display: flex;
+    background-color: #1F2937;
+    color: #F9FAF8;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Page content */
+
+div.page-content {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.page-section {
+    flex: 1 0 auto;
+}
+
+/* Section 1 */
+
+.sec-1 {
+    display: flex;
+    background-color: #1F2937;
+    justify-content: center;
+    align-items: center;
+}
+
+.sec-1 .sec-1-container {
+    display: flex;
+}
+
+.sec-1 .col-1,
+.sec-1 .col-2 {
+    width: 400px;
+}
+
+.sec-1 .col-1 p.sec-1-header {
+    font-size: 32px;
+    color: #F9FAF8;
+    font-weight: bold;
+}
+
+.sec-1 .col-1 p.sec-1-text {
+    color: #F9FAF8;
+}
+
+.sec-1 .col-1 .sec-1-btn {
+    color: #F9FAF8;
+}
+
+.sec-1 .col-2 .image {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #8a8a8a;
+}
+
+/* Section 2 */
+
+.sec-2 .sec-2-header {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin: 20px 0px;
+}
+
+.sec-2 .box-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 28px;
+}
+
+.sec-2 .box-container .box {
+    width: 100px;
+}
+
+.sec-2 .box-container .box-tile {
+    box-sizing: border-box;
+    height: 100px;
+    width: 100px;
+    border: 2px solid #3382F6;
+    border-radius: 8px;
+    margin-bottom: 6px;
+}
+
+.sec-2 .box-container .box-text {
+    font-size: 12px;
+    text-align: center;
+}
+
+
+/* Section 3 */
+
+.sec-3 {
+    background-color: #E5E7F6;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+.sec-3 .sec-3-container {
+    width: 60vh;
+}
+
+.sec-3 .sec-3-container .quote {
+    font-size: 24px;
+    font-weight: 100;
+    font-style: italic;
+    color: #1F2937;
+}
+
+.sec-3 .sec-3-container .author {
+    text-align: right;
+    font-weight: bold;
+}
+
+/* Section 4 */
+
+.sec-4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;        
+}
+
+.sec-4-box {
+    width: 80vh;
+    height: 80px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #3382F6;
+    border-radius: 6px;
+}
+
+.sec-4-box .sec-4-header {
+        color: #E5E7F6;
+    font-weight: bold;
+}
+
+.sec-4-box .sec-4-subtext {
+    color: #E5E7F6;
+    font-size: 11px;
+}
+
+/* Buttons */
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;            
+    width: 80px;
+    height: 20px;
+    border-radius: 6px;
+    font-size: 11px;
+    color: white;
+}
+
+.btn.btn-fill {
+    background-color: #3382F6;
+}
+
+.btn.btn-nofill {
+    border: 1px solid white;
+    background-color: transparent;
+}
