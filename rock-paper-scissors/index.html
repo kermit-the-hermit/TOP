@@ -5,78 +5,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <div id="game-screen">
+        <div class="game-result">
+            <div class="score-board-container">
+                <div class="round">No rounds</div>
+                <div class="score-board">
+                    <div class="ind-container">
+                        <div class="player-ind p1">Player 1</div>
+                        <div class="player-ind p2">Player 2</div>                    
+                    </div>
+                    <div class="score-container">
+                        <div class="player-score p1">0</div>
+                        <div class="score-sep">:</div>                    
+                        <div class="player-score p2">0</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="game-window"></div>
+        <div class="game-controls">
+            <div class="game-button btn-rock" data-option="Rock">
+                <img class="icon" src="./images/rock.png">
+                <div class="icon-text">Rock</div>
+            </div>
+            <div class="game-button btn-paper" data-option="Paper">
+                <img class="icon" src="./images/paper.png">
+                <div class="icon-text">Paper</div>
+            </div>
+            <div class="game-button btn-scissor"  data-option="Scissors">
+                <img class="icon" src="./images/scissors.png">
+                <div class="icon-text">Scissors</div>
+            </div>
+        </div>
+    </div>
 </body>
 
-<script>
+<script src="main.js"></script>
 
-function getUserInput () {
-    return window.prompt('Input your option:');
-}
-
-function getComputerInput () {
-    options = ['Rock', 'Paper', 'Scissors'];
-    opt_num = Math.floor(Math.random() * 3);
-    return options[opt_num];
-}
-
-function getScore (p1, p2) {
-    
-    /* Draw */
-    if (p1==p2) {
-        return 0;
-    }
-
-    return (p1=='Paper' && p2=='Rock') || (p1=='Rock' && p2=='Scissors') || (p1=='Scissors' && p2=='Paper') ? 1 : -1;
-}
-
-function playGame () {
-
-    score = {"p1": 0, "p2": 0, "draw": 0};
-
-    for (let i = 1; i <= 5; i++){
-        p1 = getUserInput ();
-        p2 = getComputerInput ();
-        
-        console.log(`Player: ${p1} Computer: ${p2}`);
-
-        switch(getScore (p1, p2)) {
-            case 1:
-                score["p1"] += 1;
-                score["p2"] += 0;
-                console.log('Player wins');
-                break;
-            case -1:
-                score["p1"] += 0;
-                score["p2"] += 1;
-                console.log('Computer wins');
-                break;
-            case 0:
-                score["draw"] += 1;
-                console.log(`It's a draw`);
-                break;
-        };
-
-    }
-
-    console.log(`Player: ${score['p1']} Computer: ${score['p2']} Draws: ${score['draw']}`);    
-
-    if (score["p1"] > score["p2"]) {
-        console.log('Player wins the game!');
-    } else if (score["p1"] < score["p2"]) {
-        console.log('Computer wins the game!');
-    } else {
-        console.log('It\'s a draw! ~~');
-    }
-
-    window.prompt('Do you want to play another round? (Y)') == 'Y' ? playGame() : null;
-
-}
-
-
-</script>
 
 </html>
 
