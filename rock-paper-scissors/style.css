@@ -1,0 +1,118 @@
+#game-screen, 
+#game-screen > * {
+  box-sizing: border-box;
+  border: 1px solid black;
+}
+
+div#game-screen {
+  width: 800px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+}
+
+div#game-screen > * {
+  flex: 1 0 0;
+}
+
+div.game-result {
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+}
+
+div.game-controls {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+div.game-controls > div.game-button {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  height: 140px;
+  width: 140px;
+}
+
+div.game-controls > div.game-button:hover {
+  background-color: #d0dfff;
+  cursor: pointer;
+}
+
+div.game-controls > div.game-button:active {
+  position: relative;
+  top: 1px;
+  background-color: #c0ccee;
+  box-shadow: 0px 0px 1px 0px black;
+}
+
+div.game-controls > div.game-button > img.icon {
+  display: block;
+  height: 100px;
+  width: 100px;
+}
+
+div.game-controls > div.game-button > div.icon-text {
+  width: fit-content;
+}
+
+/* Score board */
+
+.score-board-container {
+  width: 200px;
+  height: 120px;
+}
+
+.score-board {
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  flex-direction: column;
+}
+
+.score-container {
+  display: flex;
+}
+
+.score-container * {
+  flex: 0 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;    
+}
+
+div.player-score {
+  font-size: 60px;
+}
+
+div.score-sep {
+  font-size: 40px;
+}
+
+div.ind-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: -20px;
+}
+
+div.ind-container .p1 {
+  margin-left: 10px;
+}
+
+div.ind-container .p2 {
+  margin-right: 10px;
+}
+
+div.player-ind {
+  font-size: 14px;
+  color: #333;
+}
+
+.round {
+  text-align: center;
+}
