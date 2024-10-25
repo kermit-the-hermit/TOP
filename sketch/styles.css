@@ -1,0 +1,15 @@
+
+html * {
+    box-sizing: border-box;
+}
+
+div.sketch-grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border: 1px solid black;
+}
+
+div.sketch-square {
+    border: 1px solid lightgray;
+}
