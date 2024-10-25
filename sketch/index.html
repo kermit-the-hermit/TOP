@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etch-A-Sketch</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="sketch-grid"></div>
+</body>
+
+<script>
+
+function addSquares (nSquares=5) {
+
+    if (nSquares > 100) {
+        alert('Provided number of squares is too big. The number of squares cannot be larger then 100');
+        return;
+    }
+
+    const gridSize = 800;
+    const squareSize = gridSize/nSquares;
+    const sketchGrid = document.querySelector('div.sketch-grid');
+    sketchGrid.style.width = `${gridSize+2}px`;
+    sketchGrid.style.height = `${gridSize+2}px`;
+
+    totalNumSquares = nSquares ** 2;
+    console.log(nSquares);
+    console.log(totalNumSquares);
+
+    const square = document.createElement('div');
+    square.classList.add('sketch-square');
+    square.style.width = `${squareSize}px`;
+    square.style.height = `${squareSize}px`;
+
+    for (let i = 0; i < totalNumSquares; i++) {
+        squareCopy = square.cloneNode();
+        sketchGrid.append(squareCopy);
+    }
+
+}
+
+function createSketchGrid () {
+    addSquares();
+}
+
+createSketchGrid();
+
+const sketchGrid = document.querySelector('div.sketch-grid');
+sketchGrid.addEventListener('mouseover', 
+    function (e) {
+        if (e.target.classList.contains('sketch-square')) {
+            square = e.target;
+            square.style.backgroundColor = 'lightgray';
+        }
+    }
+)
+
+</script>    
+
+</html>
