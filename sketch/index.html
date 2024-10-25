@@ -42,20 +42,33 @@ function addSquares (nSquares=5) {
 }
 
 function createSketchGrid () {
+
+    const sketchGrid = document.querySelector('div.sketch-grid');
+
     addSquares();
+
+    sketchGrid.addEventListener('mouseover', 
+        function (e) {
+            if (e.target.classList.contains('sketch-square')) {
+                square = e.target;
+                str = getComputedStyle(square).backgroundColor;
+                regexArr =  str.match(/rgba\((.*)\)/);
+                if (regexArr !== null) {
+                    alpha = regexArr[1].split(', ')[3];
+                    alpha = Number(alpha);
+                    alpha += 0.1;
+                    square.style.backgroundColor = `rgba(0,0,0,${alpha})`;
+                }
+
+            }
+        }
+    )
+
 }
 
 createSketchGrid();
 
-const sketchGrid = document.querySelector('div.sketch-grid');
-sketchGrid.addEventListener('mouseover', 
-    function (e) {
-        if (e.target.classList.contains('sketch-square')) {
-            square = e.target;
-            square.style.backgroundColor = 'lightgray';
-        }
-    }
-)
+
 
 </script>    
 
