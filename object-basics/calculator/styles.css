@@ -1,0 +1,48 @@
+html * {
+  box-sizing: border-box;
+}
+
+.calculator,
+.calculator * {
+  padding: 10px;
+}
+
+.calculator {
+  min-width: 600px;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+}
+
+.calculator .screen {
+  border: 1px solid black;
+}
+
+.calculator .button-area {
+  border: 1px solid black;
+  display: flex;
+}
+
+.calculator .number-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1px;
+  border: 1px solid black;
+  padding: 10px;
+  width: 210px;
+}
+
+.calculator .operator-buttons {
+  border: 1px solid black;
+}
+
+.calculator .button {
+  /* flex: 0 0 auto;*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px; 
+  height: 60px; 
+  border: 1px solid black;
+}
