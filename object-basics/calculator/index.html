@@ -5,57 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.cdnfonts.com/css/digital-7-mono" rel="stylesheet">
 </head>
 
 <body>
 
     <div class="calculator">
-        <div class="screen"></div>
+        <input class="screen" disabled>
         <div class="button-area">
-            <div class="number-buttons"></div>
-            <div class="operator-buttons"></div>
+            <div class="button-container number-buttons"></div>
+            <div class="button-container operator-buttons"></div>
         </div>
     </div>
 
 </body>
 
 
-<script>
-
-calculator = document.querySelector('.calculator');
-
-/* Number buttons */
-
-numberButtons = calculator.querySelector('.number-buttons');
-
-buttonsArr = [0,1,2,3,4,5,6,7,8,9].reverse();
-
-for (btnValue of buttonsArr) {
-    btn = document.createElement('div');
-    btn.classList.add('button');
-    btn.setAttribute('value', btnValue);
-    btn.textContent = btnValue;
-
-    numberButtons.append(btn);
-}
-
-/* Operator buttons */
-
-operatorButtons = calculator.querySelector('.operator-buttons');
-
-operatorsArr = [
-    '+', '-', '*', '/', '=', 'C', '.'
-]
-
-for (btnValue of operatorsArr) {
-    btn = document.createElement('div');
-    btn.classList.add('button');
-    btn.setAttribute('value', btnValue);
-    btn.textContent = btnValue;
-
-    operatorButtons.append(btn);
-}
-
-</script>
+<script src="script.js"></script>
 
 </html>
